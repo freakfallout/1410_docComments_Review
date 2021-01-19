@@ -10,9 +10,9 @@ public class Phone {
 	    /**
 	     * Constructor of class Phone.
 	     *
-	     * @param manufacturer		manufacturer of the phone
-	     * @param model 			    model of the phone
-	     * @param operatingSystem	operating system of the phone
+	     * @param manufacturer  manufacturer of the phone
+	     * @param model model of the phone
+	     * @param operatingSystem operating system of the phone
 	     * @param uniqueID
 	     * @param count
 	     */
@@ -51,6 +51,6 @@ public class Phone {
 	    @Override
 	    public String toString() {
 	        return
-	                " " + manufacturer + " " + model + " id:" + uniqueID;
+	                manufacturer + " " + model + " " + operatingSystem + " " + id:" + uniqueID;
 	    }
 	}

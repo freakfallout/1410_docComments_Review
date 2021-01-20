@@ -1,3 +1,5 @@
+package docComments;
+
 public class Phone {
 	    private String manufacturer;
 	    private String model;
@@ -9,7 +11,7 @@ public class Phone {
 	     * Constructor of class Phone.
 	     *
 	     * @param manufacturer	manufacturer of the phone
-	     * @param mode	model of the phone
+	     * @param model	model of the phone
 	     * @param operatingSystem	operating system of the phone
 	     * @param uniqueID
 	     * @param count

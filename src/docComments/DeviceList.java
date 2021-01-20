@@ -67,15 +67,17 @@ public class DeviceList {
 		return returner;
 	}
 	
-	public Phone deviceLookup(int id) {
+	public String deviceLookup(int id) {
 		
 		for (int i = 0; i < deviceList.size(); i++) {
 			
 			if (deviceList.get(i).getUniqueID() == id)
 			{
-				return deviceList.get(i);
+				return deviceList.get(i).toString();
 			}
 		}
+		
+		return "No Phone with that ID found.";
 		
 	}
 	

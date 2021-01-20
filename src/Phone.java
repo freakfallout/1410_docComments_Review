@@ -1,18 +1,16 @@
-package docComments;
-
 public class Phone {
 	    private String manufacturer;
 	    private String model;
 	    private String operatingSystem;
 	    private int uniqueID;
-	    private int count;
+	    private static int count;
 
 	    /**
 	     * Constructor of class Phone.
 	     *
-	     * @param manufacturer  manufacturer of the phone
-	     * @param model model of the phone
-	     * @param operatingSystem operating system of the phone
+	     * @param manufacturer	manufacturer of the phone
+	     * @param mode	model of the phone
+	     * @param operatingSystem	operating system of the phone
 	     * @param uniqueID
 	     * @param count
 	     */
@@ -46,11 +44,18 @@ public class Phone {
 	     */
 	    public String getOperatingSystem() {
 	        return operatingSystem;
-	    }
+			}
+			
+			/**
+	     * Returns the unique ID of the phone.
+	     * @return the unique ID
+	     */
+	    public String getUniqueID() {
+				return uniqueID;
+		}
 
 	    @Override
 	    public String toString() {
-	        return
-	                manufacturer + " " + model + " " + operatingSystem + " " + id:" + uniqueID;
+	        return manufacturer + " " + model + " " + operatingSystem + " " + "id: " + uniqueID;
 	    }
 	}

@@ -67,6 +67,11 @@ public class DeviceList {
 		return returner;
 	}
 	
+	/**
+	 * 
+	 * @param id Unique ID to look up phone in device list.
+	 * @return Phone with that ID if found, or message saying that no phone was found.
+	 */
 	public String deviceLookup(int id) {
 		
 		for (int i = 0; i < deviceList.size(); i++) {
@@ -81,19 +86,25 @@ public class DeviceList {
 		
 	}
 	
-	
+	/**
+	 * 
+	 * @return The amount of devices stored in the DeviceList.
+	 */
 	public int numOfDevices() {
 		
 		return deviceList.size();
 	}
 	
-	public void showCommands() {
+	/**
+	 * Shows the commands that are available within the Device List.
+	 */
+	public void showCommandMenu() {
 		
-		System.out.println("1. Show all devices\n"
-				+ "2. Add a device\n"
-				+ "3. Find a device\n"
-				+ "4. Delete a device\n"
-				+ "5. Number of devices \n"
+		System.out.println("1. Show all Phones\n"
+				+ "2. Add a Phone\n"
+				+ "3. Find a Phone\n"
+				+ "4. Delete a Phone\n"
+				+ "5. Number of Phones \n"
 				+ "6. Exit\n"
 				+ "Enter your selection: ");
 	}

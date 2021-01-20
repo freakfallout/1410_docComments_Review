@@ -56,8 +56,7 @@ public class DeviceList {
 	 * 
 	 * @return A single string that lists all devices stored in this DeviceList.
 	 */
-	public String showDevices()
-	{
+	public String showDevices() {
 		String returner = "";
 		
 		for (int i = 0; i < deviceList.size(); i++) {
@@ -68,8 +67,26 @@ public class DeviceList {
 		return returner;
 	}
 	
-	public void showCommands()
-	{
+	public Phone deviceLookup(int id) {
+		
+		for (int i = 0; i < deviceList.size(); i++) {
+			
+			if (deviceList.get(i).getUniqueID() == id)
+			{
+				return deviceList.get(i);
+			}
+		}
+		
+	}
+	
+	
+	public int numOfDevices() {
+		
+		return deviceList.size();
+	}
+	
+	public void showCommands() {
+		
 		System.out.println("1. Show all devices\n"
 				+ "2. Add a device\n"
 				+ "3. Find a device\n"

@@ -6,22 +6,28 @@ public class DeviceList {
 
 	public ArrayList<Phone> deviceList;
 	
+	
+	/**
+	 * 
+	 * @param phone Already created instance of a phone.
+	 */
 	public void Add(Phone phone) {
 		
-		deviceList.add(phone)
+		deviceList.add(phone);
 		
 	}
 
 	
 	/**
+	 * Overload of Add method if no phone instance is created.
 	 * 
-	 * @param manufacturer
-	 * @param model
-	 * @param os
+	 * @param manufacturer Company that created the phone.
+	 * @param model Which type of phone it is.
+	 * @param operatingSystem What operating system it runs on. 
 	 */
-	public void Add(String manufacturer, String model, String os) {
+	public void Add(String manufacturer, String model, String operatingSystem) {
 	
-		deviceList.add(new Phone(manufacturer, model, os));
+		deviceList.add(new Phone(manufacturer, model, operatingSystem));
 		
 	}
 	
@@ -31,15 +37,25 @@ public class DeviceList {
 	 */
 	public void Remove(int id) {
 		
-		for (Phone phone : deviceList) {
-			//if (phone.getUniqueID() == id)
-			//{
-			//	deviceList.
-			//}
+		int index = 0;
+		
+		for (int i = 0; i < deviceList.size(); i++) {
+			if (deviceList.get(i).getUniqueID() == id)
+			{
+				index = i;
+				break;
+			}
 		}
+		
+		deviceList.remove(index);
+		
 		
 	}
 	
+	/**
+	 * 
+	 * @return A single string that lists all devices stored in this DeviceList.
+	 */
 	public String showDevices()
 	{
 		String returner = "";
@@ -52,18 +68,17 @@ public class DeviceList {
 		return returner;
 	}
 	
+	public void showCommands()
+	{
+		System.out.println("1. Show all devices\n"
+				+ "2. Add a device\n"
+				+ "3. Find a device\n"
+				+ "4. Delete a device\n"
+				+ "5. Number of devices \n"
+				+ "6. Exit\n"
+				+ "Enter your selection: ");
+	}
 	
 	
-	
-	
-	/**
-	 * 
-	 * 	    private String manufacturer;
-	    private String model;
-	    private String operatingSystem;
-	    private int uniqueID;
-	    private int count;
-	 * 
-	 */
 	
 }

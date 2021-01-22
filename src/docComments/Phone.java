@@ -1,6 +1,7 @@
 package docComments;
 
-public class Phone {
+public class Phone 
+{
 	    private String manufacturer;
 	    private String model;
 	    private String operatingSystem;
@@ -16,7 +17,8 @@ public class Phone {
 	     * @param uniqueID
 	     * @param count
 	     */
-	    public Phone(String manufacturer, String model, String operatingSystem) {
+	    public Phone(String manufacturer, String model, String operatingSystem) 
+	    {
 	        this.manufacturer = manufacturer;
 	        this.operatingSystem = operatingSystem;
 	        this.model = model;
@@ -28,7 +30,8 @@ public class Phone {
 	     * Returns the manufacturer of the phone.
 	     * @return the manufacturer
 	     */
-	    public String getManufacturer() {
+	    public String getManufacturer() 
+	    {
 	        return manufacturer;
 	    }
 
@@ -36,7 +39,8 @@ public class Phone {
 	     * Returns the model of the phone.
 	     * @return the model
 	     */
-	    public String getModel() {
+	    public String getModel() 
+	    {
 	        return model;
 	    }
 	    
@@ -44,20 +48,23 @@ public class Phone {
 	     * Returns the operating system of the phone.
 	     * @return the operating system
 	     */
-	    public String getOperatingSystem() {
+	    public String getOperatingSystem() 
+	    {
 	        return operatingSystem;
-			}
+		}
 			
 			/**
 	     * Returns the unique ID of the phone.
 	     * @return the unique ID
 	     */
-	    public int getUniqueID() {
-				return uniqueID;
+	    public int getUniqueID() 
+	    {
+			return uniqueID;
 		}
 
 	    @Override
-	    public String toString() {
+	    public String toString() 
+	    {
 	        return manufacturer + " " + model + " " + operatingSystem + " " + "id: " + uniqueID;
 	    }
 	}

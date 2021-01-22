@@ -56,15 +56,13 @@ public class DeviceList {
 	 * 
 	 * @return A single string that lists all devices stored in this DeviceList.
 	 */
-	public String showDevices() {
-		String returner = "";
+	public void showDevices() {
 		
 		for (int i = 0; i < deviceList.size(); i++) {
 			
-			returner += deviceList.get(i).toString() + "\n";
+			System.out.println(deviceList.get(i).toString());
 		}
 		
-		return returner;
 	}
 	
 	/**
@@ -105,8 +103,9 @@ public class DeviceList {
 				+ "3. Find a Phone\n"
 				+ "4. Delete a Phone\n"
 				+ "5. Number of Phones \n"
-				+ "6. Exit\n"
-				+ "Enter your selection: ");
+				+ "6. Exit\n");
+		
+		System.out.print("Enter your selection: ");
 	}
 	
 	
